@@ -16,14 +16,36 @@ const Navbar = ({ theme, toggleTheme }) => {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="navbar container">
         <div className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }}>
-          <svg className="brand-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="var(--accent)" strokeWidth="1.5" strokeLinejoin="round" />
-            <path d="M2 7L12 12V22" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" opacity="0.6"/>
-            <path d="M22 7L12 12" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" opacity="0.6"/>
-            <circle cx="12" cy="12" r="2.5" fill="var(--accent)" className="core-node" />
-            <circle cx="2" cy="7" r="1.5" fill="currentColor" opacity="0.8" />
-            <circle cx="22" cy="7" r="1.5" fill="currentColor" opacity="0.8" />
-            <circle cx="12" cy="22" r="1.5" fill="var(--accent)" />
+          <svg className="brand-icon" width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.8" />
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            {/* Orbits */}
+            <ellipse cx="50" cy="50" rx="40" ry="12" transform="rotate(30 50 50)" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
+            <ellipse cx="50" cy="50" rx="40" ry="12" transform="rotate(-30 50 50)" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
+            <ellipse cx="50" cy="50" rx="42" ry="14" transform="rotate(90 50 50)" stroke="var(--accent)" strokeWidth="1.5" opacity="0.6" strokeDasharray="4 6" />
+            
+            {/* Outer Tech Ring */}
+            <circle cx="50" cy="50" r="46" stroke="var(--accent)" strokeWidth="1" opacity="0.25" strokeDasharray="15 5 2 5 2 5" />
+            <circle cx="50" cy="50" r="32" stroke="currentColor" strokeWidth="1" opacity="0.15" />
+            
+            {/* Orbital Nodes */}
+            <circle cx="84" cy="70" r="3" fill="var(--accent)" />
+            <circle cx="16" cy="30" r="2.5" fill="currentColor" opacity="0.8" />
+            <circle cx="50" cy="8" r="2" fill="var(--accent)" />
+            <circle cx="50" cy="92" r="2" fill="var(--accent)" />
+            
+            {/* Glowing Core */}
+            <circle cx="50" cy="50" r="14" fill="url(#coreGlow)" className="core-node" />
+            <circle cx="50" cy="50" r="6" fill="var(--accent)" />
+            <circle cx="50" cy="50" r="2" fill="#fff" />
+            
+            {/* Core Connectors */}
+            <path d="M50 36 L50 20 M50 64 L50 80" stroke="var(--accent)" strokeWidth="1.5" opacity="0.7" />
+            <path d="M36 50 L20 50 M64 50 L80 50" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
           </svg>
           <div className="brand-text-container">
             <h1 className="logo serif" style={{ margin: 0, fontSize: '1.6rem', letterSpacing: '-0.02em' }}>
