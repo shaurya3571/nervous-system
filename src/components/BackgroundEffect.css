@@ -1,0 +1,96 @@
+.bg-effects-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #050508;
+  transition: background-color 0.6s ease;
+  pointer-events: none;
+}
+
+html[data-theme="light"] .bg-effects-container {
+  background-color: #f1f5f9;
+}
+
+
+.cursor-glow {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.06) 0%, rgba(0,0,0,0) 60%);
+  border-radius: 50%;
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.gradient-mesh {
+  position: absolute;
+  width: 100vw; height: 100vh;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: breathe 12s infinite alternate ease-in-out;
+}
+
+.mesh-blob {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, filter;
+}
+
+.blob-1 {
+  width: 60vw; height: 60vw;
+  background: rgba(0, 229, 255, 0.08); /* Cyan glow */
+  top: -20vh; left: -10vw;
+  animation: float-slow 22s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+  width: 50vw; height: 50vw;
+  background: rgba(40, 60, 200, 0.08); /* Deep Blue */
+  bottom: -20vh; right: -10vw;
+  animation: float-slow 28s infinite alternate-reverse ease-in-out;
+}
+
+.blob-3 {
+  width: 45vw; height: 45vw;
+  background: rgba(140, 20, 250, 0.05); /* Purple accent */
+  top: 40vh; left: 30vw;
+  animation: float-slow 20s infinite alternate ease-in-out;
+}
+
+.particles-overlay {
+  position: absolute;
+  width: 100%; height: 200%;
+  background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.15;
+  animation: scroll-up 80s linear infinite;
+  will-change: transform;
+}
+
+.noise-overlay {
+  position: absolute;
+  width: 100%; height: 100%;
+  /* An SVG noise pattern injected via base64 can be used, but a simple hack: */
+  background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+}
+
+@keyframes float-slow {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6%, 6%) scale(1.05); }
+  100% { transform: translate(-4%, 8%) scale(0.95); }
+}
+
+@keyframes breathe {
+  0% { opacity: 0.4; filter: blur(100px); }
+  100% { opacity: 0.6; filter: blur(140px); }
+}
+
+@keyframes scroll-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}

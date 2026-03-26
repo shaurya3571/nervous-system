@@ -1,0 +1,71 @@
+.team-section {
+  padding: 0 0 58px;
+  position: relative;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.team-card {
+  background-color: var(--panel-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+[data-theme="dark"] .team-card {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+  border-color: var(--accent);
+}
+
+.team-card h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.team-card .role {
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.team-card .divider {
+  width: 40px;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 0 auto 1.5rem;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.team-card:hover .divider {
+  width: 80px;
+  background-color: var(--accent);
+}
+
+.team-card .desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

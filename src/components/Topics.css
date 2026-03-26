@@ -1,0 +1,311 @@
+.topics-section {
+  padding: 0 0 58px;
+  position: relative;
+}
+
+.diagram-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.diagram-block {
+  padding: 4rem;
+}
+
+.diagram-header {
+  margin-bottom: 3rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+.diagram-header h3 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.diagram-header h3 span {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  display: block;
+}
+
+.diagram-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* HORIZONTAL FLOWCHART */
+.flowchart.horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flow-node {
+  flex: 1;
+  min-width: 150px;
+  padding: 2rem 1.5rem;
+  background-color: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.flow-node:hover {
+  border-color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+.flow-node.highlight {
+  background-color: var(--accent-light);
+  border-color: var(--accent);
+}
+
+.node-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.flow-node h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.flow-node p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.flow-arrow {
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255,255,255,0.1);
+  position: relative;
+}
+
+.flow-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid rgba(255,255,255,0.3);
+}
+
+/* NERVES & DIVISIONS */
+.split-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.nerve-visual-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nerve-viz {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.nerve-groups {
+  padding: 1.5rem;
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tree-diagram.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tree-node {
+  padding: 2.5rem;
+}
+
+.sub-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin: 1.5rem 0;
+}
+
+/* THE BRAIN GRID */
+.brain-grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.brain-card {
+  padding: 2rem;
+}
+
+.brain-card p {
+  color: var(--text-secondary);
+}
+
+.clean-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.clean-list li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.02);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border-left: 2px solid var(--accent);
+}
+
+.clean-list li strong {
+  color: var(--text-primary);
+}
+
+.protection-split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.protection-split h5 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.protection-split p {
+  color: var(--text-secondary);
+}
+
+.divider-vert {
+  width: 1px;
+  height: 100%;
+  background: var(--border-color);
+}
+
+/* THREE COLS (Spinal) */
+.box-layout.three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.box-node {
+  padding: 3.5rem 2rem 2.5rem;
+  position: relative;
+}
+
+.box-node p {
+  color: var(--text-secondary);
+}
+
+.box-tag {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  backdrop-filter: blur(10px);
+}
+
+.box-node.reflex {
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.box-tag.dark {
+  background-color: var(--accent);
+  color: #000;
+}
+
+/* PROTECTION MODULE GLOW */
+.protection-module-glow {
+  margin-top: 4rem;
+  padding: 3rem;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(0, 229, 255, 0.05), 0 0 20px rgba(0, 229, 255, 0.1);
+  position: relative;
+  background: rgba(0, 229, 255, 0.02);
+}
+
+.glowing-title {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #050508;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.protection-split-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 968px) {
+  .flowchart.horizontal {
+    flex-direction: column;
+  }
+  .flow-arrow {
+    width: 2px;
+    height: 30px;
+  }
+  .flow-arrow::after {
+    top: auto;
+    bottom: -4px;
+    right: -4px;
+    border-top: 8px solid rgba(255,255,255,0.3);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+  .split-with-image, .box-layout.three-cols, .protection-split, .protection-split-new {
+    grid-template-columns: 1fr;
+  }
+  .divider-vert {
+    display: none;
+  }
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+}
