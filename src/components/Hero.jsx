@@ -82,11 +82,13 @@ const Hero = () => {
           }}
         >
           <div className="brain-glow"></div>
-          <img 
-            src={brainDark}
-            alt="3D Working Model of Human Brain" 
-            className="brain-model"
-          />
+          <div className="brain-zoom-wrapper">
+            <img 
+              src={brainDark}
+              alt="3D Working Model of Human Brain" 
+              className="brain-model"
+            />
+          </div>
           <div className="floating-label label-brain animate-apple delay-4">
             <span className="dot pulse-dot"></span>Brain
           </div>

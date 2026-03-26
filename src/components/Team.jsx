@@ -38,10 +38,33 @@ const Team = () => {
         <div className="line-accent full"></div>
       </div>
 
+      <div className="group-photo-container animate-apple delay-2">
+        <img 
+          src="/team/group.jpg" 
+          alt="The BioVisionaries Team" 
+          className="group-photo"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.parentElement.classList.add('no-group-photo');
+          }}
+        />
+      </div>
+
       <div className="team-grid">
         {members.map((member, i) => (
-          <div className={`team-card glass-panel animate-apple delay-${(i % 4) + 1}`} key={member.name}>
+          <div className={`team-card glass-panel animate-apple delay-${(i % 4) + 3}`} key={member.name}>
             <div className="card-inner">
+              <div className="member-photo-container">
+                <img 
+                  src={`/team/${member.name.split(' ')[0].toLowerCase()}.jpg`} 
+                  alt={member.name} 
+                  className="member-photo"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.classList.add('no-photo');
+                  }}
+                />
+              </div>
               <h3 className="serif">{member.name}</h3>
               <p className="role" style={{ marginBottom: member.reg ? '0.4rem' : '1.5rem' }}>{member.role}</p>
               {member.reg && <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1.2rem', letterSpacing: '0.05em' }}>{member.reg} • {member.dept}</p>}

@@ -70,6 +70,49 @@
   }
 }
 
+/* Group Photo Banner */
+.group-photo-container {
+  width: 100%;
+  max-width: 1100px;
+  height: 400px;
+  margin: 4rem auto 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-bg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.group-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.group-photo-container:hover .group-photo {
+  transform: scale(1.02);
+}
+
+.group-photo-container.no-group-photo {
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+}
+
+.group-photo-container.no-group-photo::after {
+  content: 'TEAM GROUP PHOTO REQUIRED (/PUBLIC/TEAM/GROUP.JPG)';
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 0 20px;
+}
+
 /* Developer Footer */
 .developer-footer {
   margin-top: 6rem;
@@ -120,4 +163,53 @@
   color: var(--accent);
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0, 229, 255, 0.15);
+}
+
+/* Member Photo Container */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.member-photo-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.15);
+  background-color: var(--panel-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.team-card:hover .member-photo-container {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 229, 255, 0.3);
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-photo-container.no-photo {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.member-photo-container.no-photo::after {
+  content: 'PHOTO REQUIRED';
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 10px;
 }
