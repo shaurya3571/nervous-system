@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ProjectShowcase from './components/ProjectShowcase';
 import About from './components/About';
 import Topics from './components/Topics';
 import Diseases from './components/Diseases';
@@ -56,6 +57,7 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <ProjectShowcase />
         <About />
         <Topics />
         <Diseases />
