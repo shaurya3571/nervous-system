@@ -22,10 +22,10 @@ const Team = () => {
     { name: 'Aryansh', role: 'UI/UX Designer', desc: 'Curated the editorial aesthetic, visual flowcharts, and overall layout strategy.' },
     { name: 'Vaibhav Kumar', role: 'Project Leader / Coordinator', desc: 'Orchestrated project timelines, team collaboration, and overall execution.' },
     { name: 'Stuti Verma', role: 'Research & Content Specialist', desc: 'Collected information about human nervous system and ensured reliable data presentation' },
+    { name: 'Krishna Sharma', role: 'Physical Model Creator', desc: 'Engineered the final physical assembly and integrated components for interactive demonstration.' },
     { name: 'Ishita Singh', role: 'Physical Model Creator', desc: 'Spearheaded the base structural design and material selection for the tangible anatomical models.' },
     { name: 'Riya Patil', role: 'Physical Model Creator', desc: 'Crafted the intricate neural pathways and realistic internal textures of the brain.' },
-    { name: 'Adhiti Sorab', role: 'Documentation & Report Writer', desc: 'Drafted the technical documentation and comprehensive project reports.' },
-    { name: 'Krishna Sharma', role: 'Physical Model Creator', desc: 'Engineered the final physical assembly and integrated components for interactive demonstration.' }
+    { name: 'Adhiti Sorab', role: 'Documentation & Report Writer', desc: 'Drafted the technical documentation and comprehensive project reports.' }
   ];
 
   return (
@@ -39,9 +39,9 @@ const Team = () => {
       </div>
 
       <div className="group-photo-container animate-apple delay-2">
-        <img 
-          src="/team/group.jpg" 
-          alt="The BioVisionaries Team" 
+        <img
+          src="/team/group.jpg"
+          alt="The BioVisionaries Team"
           className="group-photo"
           onError={(e) => {
             e.target.style.display = 'none';
@@ -55,9 +55,9 @@ const Team = () => {
           <div className={`team-card glass-panel animate-apple delay-${(i % 4) + 3}`} key={member.name}>
             <div className="card-inner">
               <div className="member-photo-container">
-                <img 
-                  src={`/team/${member.name.split(' ')[0].toLowerCase()}.jpg`} 
-                  alt={member.name} 
+                <img
+                  src={`/team/${member.name.split(' ')[0].toLowerCase()}.jpg`}
+                  alt={member.name}
                   className="member-photo"
                   onError={(e) => {
                     e.target.style.display = 'none';
