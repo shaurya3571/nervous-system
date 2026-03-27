@@ -9,6 +9,7 @@ import Diseases from './components/Diseases';
 import Team from './components/Team';
 import BackgroundEffect from './components/BackgroundEffect';
 import Loader from './components/Loader';
+import CustomCursor from './components/CustomCursor';
 import './index.css';
 
 function App() {
@@ -38,6 +39,26 @@ function App() {
       touchMultiplier: 2,
     });
 
+    // Custom Spotlight Tracking for all Glass Panels
+    const handleGlobalMouseMove = (e) => {
+      document.querySelectorAll('.glass-panel').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    };
+    window.addEventListener('mousemove', handleGlobalMouseMove);
+
+    // High-performance Parallax Engine
+    lenis.on('scroll', (e) => {
+      document.querySelectorAll('.parallax-layer').forEach(el => {
+        const speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
+        el.style.transform = `translate3d(0, ${e.scroll * speed}px, 0)`;
+      });
+    });
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -46,6 +67,7 @@ function App() {
 
     return () => {
       clearTimeout(loadTimer);
+      window.removeEventListener('mousemove', handleGlobalMouseMove);
       lenis.destroy();
     };
   }, []);
@@ -53,6 +75,7 @@ function App() {
   return (
     <div className={`app-wrapper ${loaded ? 'ready' : ''}`}>
       <Loader />
+      <CustomCursor />
       <BackgroundEffect />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>

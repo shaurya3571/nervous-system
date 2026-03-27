@@ -12,6 +12,18 @@ html[data-theme="light"] .bg-effects-container {
   background-color: #f1f5f9;
 }
 
+.neural-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.parallax-layer {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 
 .cursor-glow {
   width: 600px;

@@ -1,0 +1,50 @@
+/* Custom Cursor Base Styling */
+@media (hover: hover) and (pointer: fine) {
+
+  .cursor-dot, .cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    border-radius: 50%;
+  }
+
+  .cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    margin: -3px 0 0 -3px; /* Exact center offset */
+    transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+  }
+
+  .cursor-ring {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    margin: -18px 0 0 -18px; /* Exact center offset */
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                margin 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                background-color 0.3s ease, 
+                border-color 0.3s ease;
+  }
+
+  /* Hover Expansion Effect */
+  .cursor-ring.hovering {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    background-color: rgba(0, 229, 255, 0.05); /* Slight tint inside the loop */
+    border-color: rgba(0, 229, 255, 0.8);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+}
+
+/* Touch Fallback */
+@media (hover: none) or (pointer: coarse) {
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
+}
