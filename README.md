@@ -72,16 +72,20 @@ npm install
 
 # Run development server
 npm run dev
+
+
 💡 What I Learned
 Building interactive educational interfaces
 Structuring scalable frontend projects
 Improving UI/UX thinking
 Using modern tools like Vite for performance
+
 📈 Future Improvements
 🧠 Add deeper biological explanations
 🎮 More interactive elements (hover, animations)
 🌍 Multi-language support
 📊 Quiz / assessment module
+
 🤝 Contributing
 Contributions are welcome!
 Feel free to fork the repo and submit a PR 🚀
