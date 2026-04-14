@@ -1,16 +1,93 @@
-# React + Vite
+# 🧠 Nervous System Bio Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🚀 Interactive visualization of the human nervous system with modern UI, 3D elements, and educational insights.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Overview
 
-## React Compiler
+This project is a **visually immersive web application** designed to explore the **human nervous system** in an engaging and intuitive way.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Built with a focus on **clean UI, smooth interactions, and educational clarity**, it blends **biology + tech** to create a modern learning experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Features
+
+- 🧬 Interactive Nervous System Visualization  
+- 🎨 Cinematic UI/UX Design  
+- 🌐 Responsive Web Interface  
+- ⚡ Fast Performance with Vite  
+- 🧩 Modular and scalable code structure  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+
+### Tools & Frameworks
+- Vite  
+- ESLint  
+
+### Concepts
+- Interactive UI  
+- Component-based structure  
+- Basic 3D/visual rendering  
+
+---
+
+## 📂 Project Structure
+📦 nervous-system-bio-project
+┣ 📂 public
+┣ 📂 src
+┣ 📜 index.html
+┣ 📜 package.json
+┣ 📜 vite.config.js
+┗ 📜 README.md
+
+ 
+---
+
+## 🚀 Live Demo
+
+🔗 https://biovisionaries.vercel.app
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/shaurya3571/nervous-system-bio-project.git
+
+# Navigate to project
+cd nervous-system-bio-project
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+💡 What I Learned
+Building interactive educational interfaces
+Structuring scalable frontend projects
+Improving UI/UX thinking
+Using modern tools like Vite for performance
+📈 Future Improvements
+🧠 Add deeper biological explanations
+🎮 More interactive elements (hover, animations)
+🌍 Multi-language support
+📊 Quiz / assessment module
+🤝 Contributing
+Contributions are welcome!
+Feel free to fork the repo and submit a PR 🚀
+📬 Contact
+GitHub: https://github.com/shaurya3571
+⭐ Support
+If you found this useful, consider giving it a ⭐ on GitHub!
+⚡ Developer Note
+Built as a first-year CS student exploring the intersection of technology + design.
