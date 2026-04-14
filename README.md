@@ -88,9 +88,13 @@ Using modern tools like Vite for performance
 🤝 Contributing
 Contributions are welcome!
 Feel free to fork the repo and submit a PR 🚀
+
 📬 Contact
+
 GitHub: https://github.com/shaurya3571
 ⭐ Support
 If you found this useful, consider giving it a ⭐ on GitHub!
+
 ⚡ Developer Note
+
 Built as a first-year CS student exploring the intersection of technology + design.
