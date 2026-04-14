@@ -72,7 +72,7 @@ npm install
 
 # Run development server
 npm run dev
-'''
+``` 
 💡 What I Learned
 Building interactive educational interfaces
 Structuring scalable frontend projects
