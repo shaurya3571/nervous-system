@@ -1,100 +1,87 @@
-# 🧠 Nervous System Bio Project
+# Nervous System Bio Project
 
-> 🚀 Interactive visualization of the human nervous system with modern UI, 3D elements, and educational insights.
+An interactive web application for exploring the human nervous system — built for educational clarity with a clean, modern interface.
 
----
-
-## 🌟 Overview
-
-This project is a **visually immersive web application** designed to explore the **human nervous system** in an engaging and intuitive way.  
-
-Built with a focus on **clean UI, smooth interactions, and educational clarity**, it blends **biology + tech** to create a modern learning experience.
+**Live Demo:** https://biovisionaries.vercel.app
 
 ---
 
-## 🎯 Features
+## Overview
 
-- 🧬 Interactive Nervous System Visualization  
-- 🎨 Cinematic UI/UX Design  
-- 🌐 Responsive Web Interface  
-- ⚡ Fast Performance with Vite  
-- 🧩 Modular and scalable code structure  
+This project visualizes the human nervous system through interactive diagrams, annotated images, and structured biological content. It is designed to be both informative and visually accessible, targeting students and educators.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-### Frontend
-- HTML  
-- CSS  
-- JavaScript  
-
-### Tools & Frameworks
-- Vite  
-- ESLint  
-
-### Concepts
-- Interactive UI  
-- Component-based structure  
-- Basic 3D/visual rendering  
+- Interactive nervous system visualization
+- Responsive layout for desktop and mobile
+- Dark and light theme support
+- Smooth scroll and reveal animations
+- Modular, component-based architecture
+- Fast development and build tooling via Vite
 
 ---
 
-## 📂 Project Structure
-📦 nervous-system-bio-project
-┣ 📂 public
-┣ 📂 src
-┣ 📜 index.html
-┣ 📜 package.json
-┣ 📜 vite.config.js
-┗ 📜 README.md
+## Tech Stack
 
- 
----
-
-## 🚀 Live Demo
-
-🔗 https://biovisionaries.vercel.app
+| Layer | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Framework | React (via Vite) |
+| Linting | ESLint |
 
 ---
 
-## ⚙️ Installation & Setup
+## Project Structure
+
+```
+nervous-system-bio-project/
+├── public/
+├── src/
+│   ├── components/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/shaurya3571/nervous-system-bio-project.git
-
-# Navigate to project
 cd nervous-system-bio-project
-
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
-``` 
-💡 What I Learned
-Building interactive educational interfaces
-Structuring scalable frontend projects
-Improving UI/UX thinking
-Using modern tools like Vite for performance
+```
 
-📈 Future Improvements
-🧠 Add deeper biological explanations
-🎮 More interactive elements (hover, animations)
-🌍 Multi-language support
-📊 Quiz / assessment module
+---
 
-🤝 Contributing
-Contributions are welcome!
-Feel free to fork the repo and submit a PR 🚀
+## Future Improvements
 
-📬 Contact
+- Deeper biological explanations per topic
+- Additional interactive elements
+- Quiz and self-assessment module
+- Multi-language support
+
+---
+
+## Contributing
+
+Contributions are welcome. Fork the repository and open a pull request with your changes.
+
+---
+
+## Contact
 
 GitHub: https://github.com/shaurya3571
-⭐ Support
-If you found this useful, consider giving it a ⭐ on GitHub!
 
-⚡ Developer Note
+---
 
-Built as a first-year CS student exploring the intersection of technology + design.
+*Built as a first-year CS student exploring the intersection of technology and design.*

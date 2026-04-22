@@ -10,35 +10,30 @@
   }
 
   .cursor-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     background-color: var(--accent);
-    box-shadow: 0 0 10px var(--accent);
-    margin: -3px 0 0 -3px; /* Exact center offset */
+    margin: -2.5px 0 0 -2.5px;
     transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease;
   }
 
   .cursor-ring {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(0, 229, 255, 0.5);
-    margin: -18px 0 0 -18px; /* Exact center offset */
-    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                margin 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                background-color 0.3s ease, 
-                border-color 0.3s ease;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(0, 196, 216, 0.4);
+    margin: -16px 0 0 -16px;
+    transition: width 0.25s ease, 
+                height 0.25s ease, 
+                margin 0.25s ease, 
+                border-color 0.25s ease;
   }
 
   /* Hover Expansion Effect */
   .cursor-ring.hovering {
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
-    background-color: rgba(0, 229, 255, 0.05); /* Slight tint inside the loop */
-    border-color: rgba(0, 229, 255, 0.8);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    border-color: rgba(0, 196, 216, 0.6);
   }
 }
 
